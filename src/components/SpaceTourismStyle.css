@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Barlow+Condensed:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Barlow Condensed', sans-serif !important;
+}
+
+h1, h2, h3 { 
+    font-family: 'Bellefair', serif !important; 
+}
