@@ -25,7 +25,7 @@ const SpaceTourismNavbar: FC = () => {
                     </Offcanvas.Header>
                     <Offcanvas.Body className='h-100 cs-bg-blured'>
                         <Nav className='justify-content-around w-100 me-sm-5'>
-                            <Link to='/home' className='text-decoration-none text-white text-uppercase cs-fw-300 py-sm-4'><span className='cs-fw-600 cs-nav-numb'>00</span> Home</Link>
+                            <Link to='/' className='text-decoration-none text-white text-uppercase cs-fw-300 py-sm-4'><span className='cs-fw-600 cs-nav-numb'>00</span> Home</Link>
                             <Link to='/destination' className='text-decoration-none text-white text-uppercase cs-fw-300 py-sm-4'><span className='cs-fw-600 cs-nav-numb'>01</span> Destination</Link>
                             <Link to='/crew' className='text-decoration-none text-white text-uppercase cs-fw-300 py-sm-4'><span className='cs-fw-600 cs-nav-numb'>02</span> Crew</Link>
                             <Link to='/technology' className='text-decoration-none text-white text-uppercase cs-fw-300 py-sm-4'><span className='cs-fw-600 cs-nav-numb'>03</span> Technology</Link>

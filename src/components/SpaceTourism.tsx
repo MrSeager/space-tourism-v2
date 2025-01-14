@@ -72,8 +72,12 @@ const SpaceTourism: FC = () => {
             <Container fluid className='vh-lg-100 p-0 overflow-hidden'>
                 <SpaceTourismNavbar />
                     <Routes>
-                        <Route path='/home' element={<PageOne />} /> 
-                        <Route path='/destination' element={<PageTwo />} />
+                        <Route path='/' element={<PageOne />} /> 
+                        <Route path='/destination' element={
+                            <PageTwo 
+                                destinationData={spaceTourismData.destinations}
+                            />} 
+                        />
                     </Routes>
                 {/*<p>{spaceTourismData.destinations[0].name}</p>
                 <p>{spaceTourismData.crew[0].name}</p>*/}
