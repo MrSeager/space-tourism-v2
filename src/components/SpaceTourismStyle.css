@@ -19,6 +19,14 @@ body {
     z-index: 5;
 }
 
+.cs-trnsition {
+    transition: .5s !important;
+}
+
+.cs-w {
+    width: 40% !important;
+}
+
 /*Backgrounds*/
 .cs-bg-page-one {
     background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/home/background-home-desktop.jpg') no-repeat center center;
@@ -27,6 +35,11 @@ body {
 
 .cs-bg-page-two {
     background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/destination/background-destination-desktop.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.cs-bg-page-three {
+    background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/crew/background-crew-desktop.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -46,8 +59,16 @@ body {
     font-family: 'Bellefair', sans-serif !important;
 }
 
+.cs-fs {
+    font-size: 7em !important;
+}
+
 .cs-fw-300 {
     font-weight: 300 !important;
+}
+
+.cs-fw-400 {
+    font-weight: 400 !important;
 }
 
 .cs-fw-600 {
@@ -72,6 +93,26 @@ body {
     width: 250px !important;
 }
 
+.cs-btn-2 {
+    border-bottom: solid 3px transparent !important;
+    border-top: solid 3px transparent !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.cs-btn-2:hover, :focus {
+    border-bottom: solid 3px white !important;
+}
+
+.cs-link {
+    border-bottom: solid 3px transparent !important;
+    border-top: solid 3px transparent !important;
+}
+
+.cs-link:hover, :focus {
+    border-bottom: solid 3px white !important;
+}
+
 @media (max-width: 991px) {
     .cs-bg-page-one {
         background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/home/background-home-tablet.jpg') no-repeat center center;
@@ -80,6 +121,11 @@ body {
 
     .cs-bg-page-two {
         background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/destination/background-destination-tablet.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .cs-bg-page-three {
+        background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/crew/background-crew-tablet.jpg') no-repeat center center;
         background-size: cover;
     }
 
@@ -100,6 +146,11 @@ body {
     
     .cs-bg-page-one {
         background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/destination/background-destination-mobile.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .cs-bg-page-three {
+        background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/crew/background-crew-mobile.jpg') no-repeat center center;
         background-size: cover;
     }
 }

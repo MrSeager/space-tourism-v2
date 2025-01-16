@@ -3,6 +3,7 @@ import React, { FC, useState, useEffect } from 'react';
 import './SpaceTourismStyle.css';
 import PageOne from './PageOne.tsx';
 import PageTwo from './PageTwo.tsx';
+import PageThree from './PageThree.tsx';
 import SpaceTourismNavbar from './SpaceTourismNavbar.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
@@ -76,6 +77,11 @@ const SpaceTourism: FC = () => {
                         <Route path='/destination' element={
                             <PageTwo 
                                 destinationData={spaceTourismData.destinations}
+                            />} 
+                        />
+                        <Route path='/crew' element={
+                            <PageThree 
+                                crewData={spaceTourismData.crew}
                             />} 
                         />
                     </Routes>
