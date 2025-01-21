@@ -4,6 +4,7 @@ import './SpaceTourismStyle.css';
 import PageOne from './PageOne.tsx';
 import PageTwo from './PageTwo.tsx';
 import PageThree from './PageThree.tsx';
+import PageFour from './PageFour.tsx';
 import SpaceTourismNavbar from './SpaceTourismNavbar.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
@@ -39,9 +40,19 @@ interface CrewProps {
     bio: string;
 }
 
+interface TechnologyProps {
+    name: string;
+    images: {
+        portrait: string;
+        landscape: string;
+    };
+    description: string;
+}
+
 interface SpaceTourismDataProps { 
     destinations: DestinationsProp[];
     crew: CrewProps[];
+    technology: TechnologyProps[];
 }
 
 const SpaceTourism: FC = () => {
@@ -82,6 +93,11 @@ const SpaceTourism: FC = () => {
                         <Route path='/crew' element={
                             <PageThree 
                                 crewData={spaceTourismData.crew}
+                            />} 
+                        />
+                        <Route path='/technology' element={
+                            <PageFour 
+                                technologyData={spaceTourismData.technology}
                             />} 
                         />
                     </Routes>

@@ -21,20 +21,20 @@ const PageTwo: FC<PageTwoProps> = ({ destinationData }) => {
     const [dest, setDest] = useState(0);
 
     return (
-        <Container fluid className='cs-bg-page-two min-vh-100 px-sm-5'>
-            <Row className='min-vh-100 mx-lg-5 mx-0 py-lg-0 py-5'>
-                <Col lg={7} xs={12} className='d-flex flex-column justify-content-lg-center justify-content-end align-items-center gap-3'>
-                    <Container className='d-flex flex-row justify-content-lg-start justify-content-center mt-lg-5 mt-0'>
-                        <h2 className='h3 text-secondary cs-fw-600 me-3 cs-ls'>01</h2>
-                        <h2 className='h3 text-white text-uppercase cs-ls cs-fw-300'>Pick your destination</h2>
-                    </Container>
+        <Container fluid className='cs-bg-page-two min-vh-100 px-5 d-flex flex-column justify-content-start'>
+            <Container fluid className='cs-top-h px-5 d-flex flex-row justify-content-start align-items-end'>
+                <h2 className='h3 text-secondary cs-fw-600 me-3 cs-ls'>01</h2>
+                <h2 className='h3 text-white text-uppercase cs-ls cs-fw-300'>Pick your destination</h2>
+            </Container>
+            <Row className='mx-0'>
+                <Col lg={7} xs={12} className='d-flex flex-column justify-content-center align-items-center'>
                     <Image fluid
-                        src={`https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/destination/image-${destinationData[dest].name.toLowerCase()}.webp`}
+                        src={`https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/` + destinationData[dest].images.webp.replace("./", "")}
                         alt={destinationData[dest].name + ' image'}
-                        className='h-50'
+                        className='h-75'
                     />
                 </Col>
-                <Col lg={5} xs={12} className='d-flex flex-column align-items-center justify-content-end mt-5 pb-5 gap-3'>
+                <Col lg={5} xs={12} className='d-flex flex-column align-items-center justify-content-end gap-3'>
                     <ButtonGroup className='align-self-lg-start gap-3'>
                         {destinationData.map((destination, index) => (
                             <Button 
