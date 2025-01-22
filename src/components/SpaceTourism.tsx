@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom';
 
 interface DestinationsProp { 
     name: string; 
-    image: { 
+    images: { 
         png: string; 
         webp: string; 
     }; 
@@ -32,7 +32,7 @@ interface DestinationsProp {
 
 interface CrewProps {
     name: string; 
-    image: { 
+    images: { 
         png: string; 
         webp: string; 
     };
@@ -80,7 +80,7 @@ const SpaceTourism: FC = () => {
     }
 
     return (
-        <Router>
+        <Router basename="/space-tourism-v2">
             <Container fluid className='vh-lg-100 p-0 overflow-hidden'>
                 <SpaceTourismNavbar />
                     <Routes>
@@ -101,8 +101,6 @@ const SpaceTourism: FC = () => {
                             />} 
                         />
                     </Routes>
-                {/*<p>{spaceTourismData.destinations[0].name}</p>
-                <p>{spaceTourismData.crew[0].name}</p>*/}
             </Container>
         </Router>
     );

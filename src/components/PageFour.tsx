@@ -20,7 +20,7 @@ const PageFour: FC<PageFourProps> = ({ technologyData }) => {
 
     return (
         <Container fluid className='cs-bg-page-four min-vh-100 d-flex flex-column justify-content-start ps-lg-5 px-0 gap-lg-0 gap-5'>
-            <Container fluid className='cs-top-h ms-lg-0 ms-5 px-5 d-flex flex-row justify-content-start align-items-end'>
+            <Container fluid className='cs-top-h ps-lg-5 ps-4 d-flex flex-row justify-content-start align-items-end'>
                 <h2 className='h3 text-secondary cs-fw-600 me-3 cs-ls'>03</h2>
                 <h2 className='h3 text-white text-uppercase cs-ls cs-fw-300'>Space launch 101</h2>
             </Container>

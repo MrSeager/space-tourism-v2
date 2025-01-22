@@ -21,8 +21,8 @@ const PageTwo: FC<PageTwoProps> = ({ destinationData }) => {
     const [dest, setDest] = useState(0);
 
     return (
-        <Container fluid className='cs-bg-page-two min-vh-100 px-5 d-flex flex-column justify-content-start'>
-            <Container fluid className='cs-top-h px-5 d-flex flex-row justify-content-start align-items-end'>
+        <Container fluid className='cs-bg-page-two min-vh-100 px-lg-5 px-0 d-flex flex-column justify-content-start'>
+            <Container fluid className='cs-top-h ps-lg-5 ps-4 d-flex flex-row justify-content-start align-items-end'>
                 <h2 className='h3 text-secondary cs-fw-600 me-3 cs-ls'>01</h2>
                 <h2 className='h3 text-white text-uppercase cs-ls cs-fw-300'>Pick your destination</h2>
             </Container>

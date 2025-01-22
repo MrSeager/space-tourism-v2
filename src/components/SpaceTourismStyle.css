@@ -39,9 +39,9 @@ body {
     height: 200px !important;
 }
 
-.cs-three-line-p {
+.cs-four-line-p {
     line-height: 1.5em; /* or whatever line-height you are using */ 
-    min-height: 4.5em; /* 3 lines x 1.5em line height */
+    min-height: 6em; /* 3 lines x 1.5em line height */
 }
 
 /*Backgrounds*/

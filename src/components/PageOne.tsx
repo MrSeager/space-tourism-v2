@@ -4,9 +4,9 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const PageOne: FC = () => {
     return (
-        <Container fluid className='cs-bg-page-one min-vh-100 px-sm-5'>
+        <Container fluid className='cs-bg-page-one min-vh-100 px-sm-5 px-0'>
             <Row className='min-vh-100 pb-5 mx-sm-5 pt-lg-0 pt-5'>
-                <Col lg={5} xs={12} className='d-flex flex-column align-items-strat justify-content-end text-lg-start text-center gap-2 my-lg-0 my-5 pt-lg-0 pt-5'>
+                <Col lg={5} xs={12} className='d-flex flex-column align-items-lg-start align-items-center justify-content-end text-lg-start text-center gap-2 my-lg-0 my-5 pt-lg-0 pt-5'>
                     <h1 className='h2 cs-ls text-white text-uppercase cs-ff-barlow-condensed cs-fw-300'>So, you want to travel to</h1>
                     <h2 className='cs-fs-150 text-white text-uppercase cs-ff-bellefair'>Space</h2>
                     <p className='text-white cs-fw-300 fs-5 mb-5'>Let’s face it; if you want to go to space, you might as well genuinely go to 
