@@ -8,7 +8,8 @@
 <body>
     <div id="root"></div>
     <script type="text/javascript">
-        if (window.location.pathname !== '/') {
+        // Redirect to the correct path while preserving the pathname
+        if (window.location.pathname !== '/' && window.location.pathname.startsWith('/space-tourism-v2/')) {
             window.location.href = '/space-tourism-v2/';
         }
     </script>
