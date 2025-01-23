@@ -63,7 +63,7 @@ const PageThree: FC<PageThreeProps> = ({ crewData }) => {
                         />
                     </Form>
                 </Col>
-                <Col lg={6} xs={12} className='d-flex flex-column justify-content-end align-items-center'>
+                <Col lg={6} xs={12} className='px-0 d-flex flex-column justify-content-end align-items-center'>
                     <Image fluid 
                         src={`https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/` + crewData[member].images.webp.replace("./", "")} 
                         alt={crewData[member].name + ' image'} 

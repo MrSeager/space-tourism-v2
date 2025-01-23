@@ -45,8 +45,8 @@ const PageTwo: FC<PageTwoProps> = ({ destinationData }) => {
                             </Button>
                         ))}
                     </ButtonGroup>
-                    <Container className='px-0 text-white text-lg-start text-center d-flex flex-column align-items-center justify-content-between'>
-                        <h3 className='cs-ff-bellefair w-100 cs-fs text-uppercase'>{destinationData[dest].name}</h3>
+                    <Container className='px-0 text-white text-lg-start text-center d-flex flex-column align-items-lg-start align-items-center justify-content-between'>
+                        <h3 className='cs-ff-bellefair px-0 cs-fs text-uppercase'>{destinationData[dest].name}</h3>
                         <p className='fs-5 cs-fw-300 cs-fw-300'>{destinationData[dest].description}</p>
                         <Row className='w-100 border-top pt-3 mt-4 gap-sm-0 gap-3'>
                             <Col sm={6} xs={12}>

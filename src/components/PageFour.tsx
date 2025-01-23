@@ -35,7 +35,7 @@ const PageFour: FC<PageFourProps> = ({ technologyData }) => {
                         <Col lg={10} xs={12} className='text-white text-lg-start text-center d-flex flex-column gap-3'>
                             <h3 className='h4 text-uppercase cs-fw-300 cs-ls'>The terminology...</h3>
                             <h3 className='display-4 cs-ff-bellefair text-uppercase cs-fw-300'>{technologyData[tech].name}</h3>
-                            <p className='cs-fw-300 cs-ls me-lg-5 pe-lg-5'>{technologyData[tech].description}</p>
+                            <p className='cs-four-nine-line-p cs-fw-300 cs-ls me-lg-5 pe-lg-5'>{technologyData[tech].description}</p>
                         </Col>
                     </Row>
                 </Col>

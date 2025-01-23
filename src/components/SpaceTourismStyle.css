@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Barlow Condensed', sans-serif !important;
+    background-color: black !important;
 }
 
 .cs-line {
@@ -33,6 +34,7 @@ body {
 
 .cs-h-2 {
     height: 500px !important;
+    object-fit: cover;
 }
 
 .cs-top-h {
@@ -40,8 +42,13 @@ body {
 }
 
 .cs-four-line-p {
-    line-height: 1.5em; /* or whatever line-height you are using */ 
-    min-height: 6em; /* 3 lines x 1.5em line height */
+    line-height: 1.5em;
+    min-height: 6em;
+}
+
+.cs-four-nine-line-p {
+    line-height: 1.5em;
+    min-height: 6em;
 }
 
 /*Backgrounds*/
@@ -193,6 +200,12 @@ body {
     .cs-h-2 {
         height: 75vh !important;
     }
+    
+
+    .cs-four-nine-line-p {
+        line-height: 1.5em;
+        min-height: 13.5em;
+    }
 
     .cs-bg-page-one {
         background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/home/background-home-tablet.jpg') no-repeat center center;
@@ -259,5 +272,13 @@ body {
     .cs-bg-page-four {
         background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/technology/background-technology-mobile.jpg') no-repeat center center;
         background-size: cover;
+    }
+
+    .cs-fs {
+        font-size: 6em !important;
+    }
+
+    .cs-fs-150 {
+        font-size: 130px !important;
     }
 }

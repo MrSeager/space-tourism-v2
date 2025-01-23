@@ -13,11 +13,8 @@ import { Container } from 'react-bootstrap';
 import axios from 'axios';
 //Spring
 import { useSpring, animated } from '@react-spring/web';
-//Images
-import LogoImg from '../starter-code/assets/shared/logo.svg';
 //Links
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 interface DestinationsProp { 
     name: string; 
@@ -72,7 +69,7 @@ const SpaceTourism: FC = () => {
     }, []); 
         
     if (loading) { 
-        return <Container fluid>Loading...</Container>; 
+        return <Container fluid className='vh-100 w-100 text-center text-white d-flex flex-column align-items-center justify-content-center'>Loading...</Container>; 
     };
 
     if (!spaceTourismData) { 
@@ -83,24 +80,26 @@ const SpaceTourism: FC = () => {
         <Router basename="/space-tourism-v2">
             <Container fluid className='vh-lg-100 p-0 overflow-hidden'>
                 <SpaceTourismNavbar />
-                    <Routes>
-                        <Route path='/' element={<PageOne />} /> 
-                        <Route path='/destination' element={
-                            <PageTwo 
-                                destinationData={spaceTourismData.destinations}
-                            />} 
+                <Routes>
+                    <Route path='/' element={
+                        <PageOne />
+                    } /> 
+                    <Route path='/destination' element={
+                        <PageTwo 
+                            destinationData={spaceTourismData.destinations}
                         />
-                        <Route path='/crew' element={
-                            <PageThree 
-                                crewData={spaceTourismData.crew}
-                            />} 
+                    } />
+                    <Route path='/crew' element={
+                        <PageThree 
+                            crewData={spaceTourismData.crew}
                         />
-                        <Route path='/technology' element={
-                            <PageFour 
-                                technologyData={spaceTourismData.technology}
-                            />} 
+                    } />
+                    <Route path='/technology' element={
+                        <PageFour 
+                            technologyData={spaceTourismData.technology}
                         />
-                    </Routes>
+                    } />
+                </Routes>
             </Container>
         </Router>
     );
