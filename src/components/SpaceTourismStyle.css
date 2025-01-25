@@ -196,6 +196,11 @@ body {
     color: black !important;
 }
 
+.cs-btn-4:hover {
+    background-color: transparent !important;
+    color: white !important;
+}
+
 @media (max-width: 991px) {
     .cs-h-2 {
         height: 75vh !important;
