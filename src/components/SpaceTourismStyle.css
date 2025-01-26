@@ -37,6 +37,10 @@ body {
     object-fit: cover;
 }
 
+.cs-min-h {
+    min-height: 445px !important;
+}
+
 .cs-top-h {
     height: 200px !important;
 }
@@ -47,6 +51,11 @@ body {
 }
 
 .cs-four-nine-line-p {
+    line-height: 1.5em;
+    min-height: 6em;
+}
+
+.cs-four-five-line-p {
     line-height: 1.5em;
     min-height: 6em;
 }
@@ -199,7 +208,22 @@ body {
 .cs-btn-4:hover {
     background-color: transparent !important;
     color: white !important;
+    scale: 1.1 !important;
 }
+
+/*Animation*/
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spin {
+    animation: spin 20s linear infinite;
+  }
 
 @media (max-width: 991px) {
     .cs-h-2 {
@@ -259,6 +283,11 @@ body {
 }
 
 @media (max-width: 575px) {
+    .cs-four-five-line-p {
+        line-height: 1.5em;
+        min-height: 7.5em;
+    }
+
     .cs-bg-page-one {
         background: url('https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/assets/home/background-home-mobile.jpg') no-repeat center center;
         background-size: cover;
