@@ -228,8 +228,7 @@ body {
 @media (max-width: 991px) {
     .cs-h-2 {
         height: 75vh !important;
-    }
-    
+    }  
 
     .cs-four-nine-line-p {
         line-height: 1.5em;

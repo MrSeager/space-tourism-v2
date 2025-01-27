@@ -1,9 +1,9 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 //Bootstrap
 import { Container, Row, Col, Form, Image } from 'react-bootstrap';
 //Spring
 import { useSpring, animated } from '@react-spring/web';
-import { useSlide } from './animation.tsx';
+import { useSlide, useFadeTransition } from './animation.tsx';
 
 interface CrewProps { 
     name: string; 
@@ -23,6 +23,34 @@ const PageThree: FC<PageThreeProps> = ({ crewData }) => {
     const [member, setMember] = useState(0);
     const slideLift = useSlide('-');
     const slideRight = useSlide('+');
+
+    const [itemsImage, setItemsImage] = useState([
+        { id: member, src: crewData[member].images.webp, role: crewData[member].role }
+    ]);
+    
+    useEffect(() => {
+        setItemsImage([{ id: member, src: crewData[member].images.webp, role: crewData[member].role }]);
+    }, [member]);
+    
+    const transitionsImage = useFadeTransition(itemsImage);
+    
+    const [itemsText, setItemsText] = useState([{
+        id: member,
+        role: crewData[member].role,
+        name: crewData[member].name,
+        bio: crewData[member].bio
+    }]);
+    
+    useEffect(() => {
+        setItemsText([{
+            id: member,
+            role: crewData[member].role,
+            name: crewData[member].name,
+            bio: crewData[member].bio
+        }]);
+    }, [member]);
+
+    const transitionsText = useFadeTransition(itemsText);
     
     return (
         <Container fluid className='cs-bg-page-three min-vh-100 px-lg-5 px-0 d-flex flex-column justify-content-between'>
@@ -35,10 +63,14 @@ const PageThree: FC<PageThreeProps> = ({ crewData }) => {
             <Row className='mx-0'>
                 <Col lg={6} xs={12} className='ps-lg-5 text-white text-lg-start text-center pt-lg-0 pt-5'>
                     <animated.div style={slideLift} className='h-100 d-flex flex-column justify-content-between gap-3 '>
-                        <Container className='h-100 my-auto px-0 d-flex flex-column justify-content-center align-items-center gap-3'>
-                            <h3 className='text-white-50 cs-ff-bellefair w-100 h2 text-uppercase cs-fw-300'>{crewData[member].role}</h3>
-                            <h3 className='cs-ff-bellefair w-100 h1 text-uppercase cs-fw-400'>{crewData[member].name}</h3>
-                            <p className='cs-four-line-p w-100 text-white'>{crewData[member].bio}</p>
+                        <Container className='h-100 px-0 position-relative'>
+                            {transitionsText((style, item) => (
+                            <animated.div style={style} key={item.id} className='h-100 d-flex flex-column justify-content-center align-items-center gap-3'>
+                                <h3 className='text-white-50 cs-ff-bellefair w-100 h2 text-uppercase cs-fw-300'>{item.role}</h3>
+                                <h3 className='cs-ff-bellefair w-100 h1 text-uppercase cs-fw-400'>{item.name}</h3>
+                                <p className='cs-four-line-p text-white'>{item.bio}</p>
+                            </animated.div>
+                            ))}
                         </Container>
                         <Form className='mb-5 d-flex flex-row justify-content-lg-start justify-content-center gap-3'>
                             <Form.Check
@@ -72,13 +104,17 @@ const PageThree: FC<PageThreeProps> = ({ crewData }) => {
                         </Form>
                     </animated.div>
                 </Col>
-                <Col lg={6} xs={12} className='px-0 d-flex flex-column justify-content-end align-items-center'>
-                    <animated.div style={slideRight}>
-                        <Image fluid 
-                            src={`https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/` + crewData[member].images.webp.replace("./", "")} 
-                            alt={crewData[member].name + ' image'} 
-                            className='cs-h-2' 
-                        />
+                <Col lg={6} xs={12} className='px-0 '>
+                    <animated.div style={slideRight} className='position-relative w-100'>
+                        {transitionsImage((style, item) => (
+                            <animated.div style={style} key={item.id} className='w-100 d-flex flex-column align-items-center justify-content-center'>
+                                <Image fluid 
+                                    src={`https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/` + item.src.replace("./", "")} 
+                                    alt={item.name + ' image'} 
+                                    className='cs-h-2' 
+                                />
+                            </animated.div>
+                        ))}
                     </animated.div>
                 </Col>
             </Row>

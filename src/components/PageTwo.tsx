@@ -63,11 +63,11 @@ const PageTwo: FC<PageTwoProps> = ({ destinationData }) => {
                     <h2 className='h3 text-white text-uppercase cs-ls cs-fw-300'>Pick your destination</h2>
                 </Container>
             </animated.div>
-            <Row className='mx-0'>
+            <Row className='mx-0 my-auto h-100'>
                 <Col lg={7} xs={12} className='cs-min-h d-flex flex-column align-items-center justify-content-center'>
                     <animated.div style={slideLift} className='w-50 position-relative overflow-hidden'>
                     {transitionsImage((style, item) => (
-                        <animated.div style={style} key={item.id} className={`${item.id === dest ? '' : 'position-absolute'} m-auto`}>
+                        <animated.div style={style} key={item.id} className='w-100 d-flex flex-column align-items-center justify-content-center'>
                             <Image fluid
                                 src={`https://raw.githubusercontent.com/MrSeager/space-tourism-v2/refs/heads/main/src/starter-code/` + item.src.replace("./", "")}
                                 alt={item.name + ' image'}
